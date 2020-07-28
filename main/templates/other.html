@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block contents %}
+
+<br>
+<h4>나의 좋아요 목록</h4>
+
+{% for i in account.post_like.all %}
+<p>{{i.title}}</p>
+{% endfor %}
+<br>
+<a href="{% url 'main' %}">홈으로</a>
+{% endblock %}
+

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block contents %}
+<!--아이디랑 비밀번호를 받는 폼-->
+<br><br>
+<form method="POST" action="{% url 'login' %}">
+{% csrf_token %} <!--보안역할-->
+    <ul style="list-style: none;">
+        <li>ID : <input type="text" name="user_id"></li><br>
+        <li>비밀번호 : <input type="text" name="password"></li><br>
+        <input type="submit" value="로그인" class="btn btn-dark">
+    </ul>
+    <div>
+        {% if messages %}
+        {% for message in messages %}
+        {{ message.message }}
+        {% endfor %}
+        {% endif %}
+    </div>
+</form>
+
+{% endblock %}

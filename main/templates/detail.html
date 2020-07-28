@@ -1,0 +1,15 @@
+<form action="{% url 'delete' %}">
+
+<h1>detail page</h1>
+<p>{{blog.title}}</p>
+<p>{{blog.date}}</p>
+<p>{{blog.body}}</p>
+
+<input type="hidden" id="blogNum" name="blogNum" value="{{blog.id}}">
+<input class="btn btn-dark" type="submit" value="삭제">
+
+<a href="{% url 'edit' blog.id %}">수정</a>
+<br><br>
+<a href="{% url 'main' %}">Home으로 돌아가기</a>
+
+</form>

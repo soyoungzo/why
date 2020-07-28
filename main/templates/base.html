@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <title>상속을 시킬거에요</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+        <a class="navbar-brand" href="{% url 'main' %}">Like Lion</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ml-auto">
+        <a class="nav-item nav-link active" href="{% url 'main' %}">Home</span></a>
+        <a class="nav-item nav-link" href="{% url 'news' %}">글쓰기</a>
+        <a class="nav-item nav-link" href="{% url 'signup' %}">회원가입</a>
+        <a class="nav-item nav-link" href="{% url 'login' %}">로그인</a>
+        <a class="nav-item nav-link" href="{% url 'logout' %}">로그아웃</a>
+        </div>
+        </div>
+        </div>
+    </nav>
+
+    {% block contents %}
+
+    {% endblock %}
+
+    </body>

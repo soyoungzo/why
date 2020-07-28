@@ -1,0 +1,22 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>portfolio</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body>
+
+<div class="card" style="width: 18rem;">
+    <img src="{% static 'image1.png' %}" class="card-img-top" alt="i.img.src">
+    <div class="card-body">
+      <h5 class="card-title">Thumps Up</h5>
+      <p class="card-text">You Do Great Job!</p>
+      <a href="#" class="btn btn-primary">Like</a>
+      <a href="{% url 'main' %}" class="btn btn-primary">Go main</a>
+    </div>
+  </div>
+  
+</body>
+</html>

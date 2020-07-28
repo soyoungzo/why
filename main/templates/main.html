@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+<!----base에 상속시키기 시작------>
+
+{% block contents %}
+
+<h1>Main Page</h1>
+<p>{{txt}}</p>
+    <a href="{% url 'other' %}">내가 좋아한 글 보기</a>
+    <br><br>
+
+    {% for blog in blog.all%}
+    <p>{{blog.title}}</p>
+    <p>{{blog.date}}</p>
+    <p>{{blog.summary}}<a href="{% url 'detail' blog.id%}">...더보기</a> &nbsp; Like : {{blog.like_number}}</p>
+    <a href="{% url 'like' blog.id %}">
+        {% if blog in account.post_like.all %}
+        취소
+        {% else %}
+        Like
+        {% endif %}
+    </a>
+    {% endfor %}
+    
+    {% endblock %}
+
+<!----block 끝내기------->
+
